@@ -14,7 +14,7 @@ dataset_size = 100
 cap = cv2.VideoCapture(0)
 
 if not cap.isOpened():
-    print("❌ Cannot access camera. Exiting.")
+    print(" Cannot access camera. Exiting.")
     exit()
 
 # Collect data for each letter
@@ -22,13 +22,13 @@ for gesture in gesture_classes:
     class_dir = os.path.join(DATA_DIR, gesture)
     os.makedirs(class_dir, exist_ok=True)
 
-    print(f'📸 Collecting data for gesture "{gesture}"...')
+    print(f' Collecting data for gesture "{gesture}"...')
 
     # Prompt user to prepare
     while True:
         ret, frame = cap.read()
         if not ret:
-            print("⚠️ Failed to grab frame. Skipping...")
+            print(" Failed to grab frame. Skipping...")
             continue
 
         cv2.putText(frame, f'Show: "{gesture}" | Press "Q" to start!', (50, 50),
@@ -43,7 +43,7 @@ for gesture in gesture_classes:
     while counter < dataset_size:
         ret, frame = cap.read()
         if not ret:
-            print("⚠️ Frame capture failed.")
+            print(" Frame capture failed.")
             continue
 
         cv2.imshow('frame', frame)
@@ -51,10 +51,10 @@ for gesture in gesture_classes:
         counter += 1
 
         if cv2.waitKey(25) & 0xFF == ord('q'):
-            print("⏹️ Early exit requested.")
+            print("⏹Early exit requested.")
             break
 
 # Cleanup
 cap.release()
 cv2.destroyAllWindows()
-print("✅ Dataset collection complete.")
+print(" Dataset collection complete.")
