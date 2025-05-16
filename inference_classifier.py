@@ -6,7 +6,7 @@ import os
 from collections import deque
 
 # === Load model and label encoder ===
-model_path = '/Users/gauravtalele/Desktop/sign-language-detector-python-master/model.p'
+model_path = '/sign-language-detector-python-master/model.p'
 model_dict = pickle.load(open(model_path, 'rb'))
 model = model_dict['model']
 label_encoder = model_dict['label_encoder']
@@ -28,7 +28,7 @@ last_saved_letter = None
 current_prediction = ""
 
 # === Load reference image ===
-reference_image_path = '/Users/gauravtalele/Desktop/sign-language-detector-python-master/Sign_alphabet_chart_abc.jpg'
+reference_image_path = '/sign-language-detector-python-master/Sign_alphabet_chart_abc.jpg'
 reference_image = cv2.imread(reference_image_path)
 if reference_image is not None:
     reference_image = cv2.resize(reference_image, (300, 200))
