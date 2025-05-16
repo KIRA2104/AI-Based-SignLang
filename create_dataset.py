@@ -21,7 +21,7 @@ options = HandLandmarkerOptions(
 detector = HandLandmarker.create_from_options(options)
 
 # Dataset directory
-DATA_DIR = '/Users/gauravtalele/Desktop/sign-language-detector-python-master/data'
+DATA_DIR = '/sign-language-detector-python-master/data'
 
 data = []
 labels = []
