@@ -7,8 +7,8 @@ from sklearn.metrics import accuracy_score
 from sklearn.preprocessing import LabelEncoder
 
 # === Paths ===
-data_path = '/Users/gauravtalele/Desktop/sign-language-detector-python-master/data.pickle'
-model_path = '/Users/gauravtalele/Desktop/sign-language-detector-python-master/model.p'
+data_path = '/sign-language-detector-python-master/data.pickle'
+model_path = '/sign-language-detector-python-master/model.p'
 
 # === Load the landmark dataset ===
 with open(data_path, 'rb') as f:
