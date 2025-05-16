@@ -3,7 +3,7 @@ import cv2
 import string
 
 
-DATA_DIR = '/Users/gauravtalele/Desktop/sign-language-detector-python-master/data'
+DATA_DIR = '/sign-language-detector-python-master/data'
 os.makedirs(DATA_DIR, exist_ok=True)
 
 
